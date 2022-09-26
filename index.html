@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MoRig: Motion-Aware Rigging of Character Meshes from Point Clouds</title>
+
+<link media="all" href="./style.css" type="text/css" rel="stylesheet">
+<style type="text/css" media="all">
+
+pre{    
+  display: block;
+    padding: 4px;
+    margin: 0 0 1px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+img {
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 10px;
+	FLOAT: right;
+	PADDING-BOTTOM: 10px;
+	PADDING-TOP: 10px
+}
+#content {
+	MARGIN-LEFT: auto;
+ WIDTH: expression(document.body.clientWidth > 925? "925px": "auto" );
+	MARGIN-RIGHT: auto;
+	TEXT-ALIGN: left;
+	max-width: 925px
+}
+body {
+	TEXT-ALIGN: center
+}
+.harlow {
+    font-family: "Times New Roman";
+    font-size: 16px;
+}
+</style>
+</head>
+<body>
+<div id="content">
+  <h1 align="center" class="sammy-nowrap-1">MoRig: Motion-Aware Rigging of Character Meshes from Point Clouds</h1>
+  <div align="center">
+  <ul id="people" align="center">
+    <a href="https://people.cs.umass.edu/~zhanxu/">Zhan Xu</a> <a>, </a>
+    <a href="https://people.umass.edu/~yangzhou/">Yang Zhou</a> <a>, </a>
+    <a href="https://ericyi.github.io//">Li Yi</a> <a>, </a>
+    <a href="http://people.cs.umass.edu/~kalo/">Evangelos Kalogerakis</a>
+  </ul>
+</div>
+
+  <p align="center"><i>SIGGRAPH ASIA 2022</i></p>
+
+  <p><img src="teaser_morig.png" width="925" align="center" style="padding: 30px 0px 10px 0px"></p>
+
+  <p><em>Given (a) an input mesh and (b) a single-view point cloud sequence capturing a performing character,  our deep learning method, called MoRig, automatically rigs and animates the mesh based on the point cloud motion. This is achieved by (c) producing motion-aware features on the mesh encoding articulated parts from the captured motion, (d) using the features to infer an appropriate skeletal rig for the mesh, and (e) re-targeting the motion from the point cloud to the rig. </em></p>
+
+  <h2>Abstract</h2>
+  <p align="justify">We present <em>MoRig</em>, a method that automatically rigs character meshes driven by single-view point cloud streams capturing the motion of performing characters. Our method is also able to animate the 3D meshes according to the captured point cloud motion.MoRig's neural network encodes motion cues from the point clouds into features that are informative about the articulated parts of the performing character. These motion-aware features guide the inference of an appropriate skeletal rig for the input mesh, which is then animated based on the point cloud motion. Our method can rig and animate diverse characters, including humanoids, quadrupeds, and toys with varying articulation. It accounts for occluded regions in the  point clouds and mismatches in the part proportions between the input mesh and captured character. Compared to other rigging approaches that ignore motion cues, MoRig produces more accurate rigs,  well-suited for re-targeting motion from captured characters. </p>
+  
+  <h2>Paper</h2>
+  Coming soon!
+  <!-- <a href="https://people.cs.umass.edu/~zhanxu/papers/RigNet.pdf">RigNet.pdf</a>, 11.6MB<br> -->
+
+  <br> 
+  <h2>Source Code &amp; Data</h2>
+  Coming soon!
+  
+  <!-- <h2>Poster</h2>
+  <p><a href="https://people.cs.umass.edu/~zhanxu/projects/APES/POSTER_APES.pdf"><img src="poster_thumb.png" alt="" width="600" height="300" style="float:left"></a></p> -->
+    
+  <br>
+  <h2>Supplementary Video</h2>
+  <iframe width="640" height="360" src="https://www.youtube.com/embed/sPxfnQ8j07Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  
+   
+  <!-- <h2>30s fast-forward demo for SIGGRAPH 2020</h2>
+ <iframe width="640" height="360" src="https://www.youtube.com/embed/LL2KdYxr26c?list=PL1U-zmoZcBllPJ8yG4vDGc_Cjvshero22" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+  
+
+  <br>
+  <h2>Results</h2>
+  <p><img src="res_syn.png" width="925" align="center" style="padding: 30px 0px 10px 0px"></p>
+
+  <p><em>Rigging and deformation results with  synthetic point cloud sequences from the ModelsResource dataset. For each example, the top row shows the original target mesh, and three of the input point cloud frames. In the bottom row, we show the predicted motion-aware features in the red rectangle, our rigging results, and also deformed meshes corresponding to the point cloud frames.</em></p>
+
+  <p><img src="res_real.png" width="925" align="center" style="padding: 30px 0px 10px 0px"></p>
+
+  <p><em>Rigging and deformation results with real-world point cloud sequences from DFaust (top) and KillingFusion (bottom).  For each example, the top row shows the original target mesh, and three of the input point cloud frames. In the bottom row, we show the predicted motion features in the red rectangle, our rigging results, and then deformed meshes corresponding to the point cloud frames.</em></p>
+  
+  <br>
+  <h2>Citation</h2>
+  <pre>
+  @inproceedings{xu2022morig,
+    title={MoRig: Motion-Aware Rigging of Character Meshes from Point Clouds},
+    author={Xu, Zhan and and Zhou, Yang and Yi, Li and Kalogerakis, Evangelos},
+    booktitle={Proc. ACM SIGGRAPH AISA},
+    year={2022}
+  }</pre>
+
+
+</div>
+
+
+</body></html>
